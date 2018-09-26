@@ -50,6 +50,8 @@ end
 
 gem 'rspec_junit_formatter', require: false, group: :ci
 
+gem 'mutant-rspec', '~> 0.8.17'
+
 # Documentation
 gem 'yard'
 
