@@ -1,0 +1,28 @@
+- subject: Spree::OrderPromotion
+  comment: Uncovered conditional
+- subject: Spree::Ability#initialize
+  comment: Uncovered authentication code
+- subject: Spree::Wallet#default_wallet_payment_source=
+  comment: |
+    * Unspecified transaction
+    * Weak equality
+    * Unspecified exception message
+    * Dead code
+- subject: Spree::Wallet#remove
+  comment: Unspecified delete restriction
+- subject: Spree::Wallet#default_wallet_payment_source
+  comment: Unspecified read restriction
+- subject: Spree::ShippingMethod#include?
+  comment: No direct covering specs, interesting case to start from scratch.
+- subject: Spree::Role#admin?
+  comment: No direct covering specs, interesting case to start from scratch. Start with empty spec to constrain selection.
+- subject: Spree::BillingIntegration
+  comment: No direct covering specs, interesting case to start from scratch. Start with empty spec to constrain selection.
+- subject: Spree::CreditCard#expiry=
+  comment: Dead conditionas, unspecified coercions
+- subject: Spree::CreditCard#first_name
+  comment: Underspecified string conversion, and unverified regexp match extraction, should be private also, duplication
+- subject: Spree::CreditCard#last_name
+  comment: Underspecified string conversion, and unverified regexp match extraction, should be private also, duplication
+- subject: Spree::CreditCard#set_last_digits
+  comment: Underspecified value mutation & conditionals etc in security relevant piece of code
