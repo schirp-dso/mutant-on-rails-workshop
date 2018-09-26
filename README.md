@@ -39,3 +39,11 @@ but it would require a bigger setup diff that is specific to the example project
 * Install MRI Ruby 2.3 or higher, `rubygems` and `bundler`.
 * Clone this repository
 * `cd solidus && bundle install`
+
+## Workshop setting
+
+After the setup has been confirmed to work for everyone, we'll do a really quick recap
+on `mutant` and show the `solidus` specific setup that has been done.
+
+We'll then walk through one of the examples together. After that, we'll have
+groups (or individuals) work on the remaining example subjects we've selected.
