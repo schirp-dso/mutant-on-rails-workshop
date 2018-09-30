@@ -2,6 +2,10 @@
   comment: Uncovered conditional
 - subject: Spree::Ability#initialize
   comment: Uncovered authentication code
+- subject: Spree::Core::ControllerHelpers::Auth#current_ability
+  comment: |
+    * Underspecified authentication code
+    * Missing branch coverage ("hidden" behind `||=`)
 - subject: Spree::Wallet#default_wallet_payment_source=
   comment: |
     * Unspecified transaction
@@ -26,3 +30,70 @@
   comment: Underspecified string conversion, and unverified regexp match extraction, should be private also, duplication
 - subject: Spree::CreditCard#set_last_digits
   comment: Underspecified value mutation & conditionals etc in security relevant piece of code
+- subject: Spree::Core::ControllerHelpers::Search#build_searcher
+  comment: |
+    * Unspecified user input
+    * Unspecified configuration
+    * Missing line coverage
+- subject: Spree::Core::ControllerHelpers::Auth#redirect_back_or_default
+  comment: |
+    * Underspecified behavior (missing line coverage)
+    * Semantic reduction possibility (`#[]` => `#fetch`)
+- subject: Spree::Core::ControllerHelpers::Auth#set_guest_token
+  comment: |
+    * Underspecified authentication code
+    * Missing line coverage
+    * Missing branch coverage
+- subject: Spree::Core::ControllerHelpers::Auth#store_location
+  comment: |
+    * Underspecified authentication code
+    * Missing line coverage
+    * Missing branch coverage
+- subject: Spree::RoleConfiguration#assign_permissions
+  comment: |
+    * Semantic reduction (`#to_s` => `#to_str`)
+    * Missing line coverage (but actually dead code)
+- subject: Spree::Core::ControllerHelpers::PaymentParameters
+  comment: |
+    * Underspecified payment related code
+    * Missing branch coverage
+    * Underspecified return value
+    * Potentially dead code
+- subject: Spree::Money
+  comment: |
+    * Underspecified payment related code
+    * Missing branch coverage
+- subject: Spree::LineItem#total_before_tax
+  comment: |
+    * SLOW
+    * Underspecified payment/tax related code
+    * Missing branch coverage
+- subject: Spree::LineItem#money_price=
+  comment: |
+    * SLOW
+    * Underspecified payment/tax related code
+    * Semantic reduction (`#!=` => `#eql?`)
+    * Potentially dead code
+    * Missing branch coverage
+- subject: Spree::LineItem#options=
+  comment: |
+    * SLOW
+    * Underspecified payment related code
+    * Unspecified parameter default value (aka branch coverage)
+    * Missing branch coverage
+- subject: Spree::Order#item_total_excluding_vat
+  comment: |
+    * Incorrect spec setup leading to mutations
+    * `Array` vs. `ActiveRecord::Associations::CollectionProxy`
+- subject: Spree::TaxRrate#active?
+  comment: |
+    * Underspecified comparison (`#<` vs. `#<=`, `#>` vs. `#>=`)
+- subject: Spree::TaxRrate#adjust
+  comment: |
+    * SLOW but easy to make fast
+    * To fix, stub collaborator(s) and assert interactions with them
+- subject: Spree::Core::ControllerHelpers::Order#set_current_order
+  comment: |
+    * SLOW but easy to make fast
+    * To fix, stub collaborator(s) and assert interactions with them
+    * Missing branch coverage
