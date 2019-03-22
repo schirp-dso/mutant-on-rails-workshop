@@ -1,0 +1,11 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+
+gem 'rspec-expectations', '~> 3.8.2'
+gem 'mutant-rspec',       '~> 0.8.24'
+
+# This example is using rspec, but feel
+# free to change it to minitest as an exercise
+#
+# gem 'mutant-minitest', '~> 0.8.24'
