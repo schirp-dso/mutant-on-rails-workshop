@@ -31,7 +31,7 @@ but it would require a bigger setup diff that is specific to the example project
 
 ## Setup
 
-* Install MRI Ruby 2.3 or higher, `rubygems` and `bundler`.
+* Install MRI Ruby 2.5 or higher, `rubygems` and `bundler`.
 * Clone this repository
 * `cd solidus && bundle install`
 * `cd example && bundle install`
