@@ -22,7 +22,7 @@ but it would require a bigger setup diff that is specific to the example project
   workshop.
 * Setup your WIFI (for being able to fix any setup issue you might be encountering).
 
-## Assumptions for attendess
+## Assumptions for attendees
 
 * You know `rails`
 * You know `rspec`
@@ -51,4 +51,4 @@ cd example
 bundle exec mutant -I lib -r my_range --use rspec -- 'MyRange*'
 ```
 
-Than iterate and ask questions.
+Then iterate and ask questions.
