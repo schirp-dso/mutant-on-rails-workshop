@@ -24,16 +24,16 @@ RSpec.describe MyRange do
 
     context 'when they touch' do
       let(:left) { 1..2 }
-      let(:right) { 2..3}
+      let(:right) { 2..3 }
 
       it 'returns true' do
         expect(apply).to be(true)
       end
     end
 
-    context 'when they touch' do
-      let(:left) { 2..3}
-      let(:right) { 1..2 }
+    context 'when they touch 2' do
+      let(:left) { 1..2 }
+      let(:right) { 1..7 }
 
       it 'returns true' do
         expect(apply).to be(true)
