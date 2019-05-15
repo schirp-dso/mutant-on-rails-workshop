@@ -39,5 +39,23 @@ RSpec.describe MyRange do
         expect(apply).to be(true)
       end
     end
+
+    context 'when ranges overlap by touching (case 3)' do
+      let(:left)  { 3..5 }
+      let(:right) { 5..7 }
+
+      it 'returns true' do
+        expect(apply).to be(true)
+      end
+    end
+
+    context 'when ranges overlap by touching (case 4)' do
+      let(:left)  { 3..5 }
+      let(:right) { 1..3 }
+
+      it 'returns true' do
+        expect(apply).to be(true)
+      end
+    end
   end
 end
