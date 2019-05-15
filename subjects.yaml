@@ -85,10 +85,10 @@
   comment: |
     * Incorrect spec setup leading to mutations
     * `Array` vs. `ActiveRecord::Associations::CollectionProxy`
-- subject: Spree::TaxRrate#active?
+- subject: Spree::TaxRate#active?
   comment: |
     * Underspecified comparison (`#<` vs. `#<=`, `#>` vs. `#>=`)
-- subject: Spree::TaxRrate#adjust
+- subject: Spree::TaxRate#adjust
   comment: |
     * SLOW but easy to make fast
     * To fix, stub collaborator(s) and assert interactions with them
