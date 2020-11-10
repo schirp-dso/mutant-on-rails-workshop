@@ -50,7 +50,7 @@ end
 
 gem 'rspec_junit_formatter', require: false, group: :ci
 
-gem 'mutant-rspec', '~> 0.9.5'
+gem 'mutant-rspec', '~> 0.10.6'
 
 group :test do
   source 'https://oss:Px2ENN7S91OmWaD5G7MIQJi1dmtmYrEh@gem.mutant.dev' do
