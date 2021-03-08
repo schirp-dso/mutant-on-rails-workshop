@@ -12,6 +12,6 @@ module MyRange
   #
   # @return [Boolean]
   def self.overlap?(left, right)
-    # your code here
+    left.end >= right.begin && left.begin <= right.begin
   end
 end # MyRange
